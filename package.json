@@ -1,0 +1,25 @@
+{
+  "name": "ose-language-highlight",
+  "displayName": "ose language highlight",
+  "description": "syntax highlight for Object Sense Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ose",
+      "aliases": ["ObjectSense", "ose"],
+      "extensions": [".ose"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ose",
+      "scopeName": "",
+      "path": "./syntaxes/ose.tmLanguage.json"
+    }]
+  }
+}
