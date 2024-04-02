@@ -3,6 +3,17 @@
   "displayName": "ose language highlight",
   "description": "syntax highlight for Object Sense Language",
   "version": "0.0.1",
+  "publisher": "shezw",
+  "icon": "assets/logo.png",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/shezw/ose-highlight"
+  },
+  "author": {
+    "name": "shezw",
+    "email": "hello@shezw.com",
+    "url": "https://shezw.com"
+  },
   "engines": {
     "vscode": "^1.87.0"
   },
@@ -10,16 +21,27 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "ose",
-      "aliases": ["ObjectSense", "ose"],
-      "extensions": [".ose"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "ose",
-      "scopeName": "",
-      "path": "./syntaxes/ose.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "ose",
+        "aliases": [
+          "ObjectSense",
+          "ose"
+        ],
+        "extensions": [
+          ".ose"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ose",
+        "scopeName": "source.ose",
+        "path": "./syntaxes/ose.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
   }
 }
