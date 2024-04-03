@@ -172,6 +172,15 @@
 		  },
 		  {
 			"include": "#keywordLists"
+		  },
+		  {
+			"include": "#objectSenseBasic"
+		  },
+		  {
+			"include": "#objectSensePlatform"
+		  },
+		  {
+			"include": "#objectSenseCommand"
 		  }
 		]
 	  },
@@ -1476,6 +1485,18 @@
 	  "vimUserCommand": {
 		"name": "support.function.vimUserCommand.ose",
 		"match": "(?x) \\b\n( com\n| command\n) \\b"
+	  },
+	  "objectSenseBasic": {
+		"name": "objectSenseBasic.ose",
+		"match": "\\b(Next|Package|Class|Inherits|Import|Module|Borrow|UnitTestBelow|UnitTest|Micro|self|End)\\b"
+	  },
+	  "objectSensePlatform": {
+		"name": "sense.objectSense.$1.ose",
+		"match": "\\b(export|require|description|supplement|main|parser|command)\\b"
+	  },
+	  "objectSenseCommand": {
+		"name": "support.function.objectSenseCommand.ose",
+		"match": "(?x) \\b\n( rose\n| mudem\n) \\b"
 	  }
 	}
   }
