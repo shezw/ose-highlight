@@ -32,6 +32,25 @@
           ".ose"
         ],
         "configuration": "./language-configuration.json"
+      },
+      {
+          "id": "markdown",
+          "aliases": [
+              "Markdown",
+              "markdown"
+          ],
+          "extensions": [
+              ".md",
+              ".mkd",
+              ".mdwn",
+              ".mdown",
+              ".markdown",
+              ".markdn",
+              ".mdtxt",
+              ".mdtext",
+              ".workbook"
+          ],
+          "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
@@ -39,7 +58,20 @@
         "language": "ose",
         "scopeName": "source.ose",
         "path": "./syntaxes/ose.tmLanguage.json"
-      }
+      },
+      {
+          "language": "markdown",
+          "scopeName": "text.html.markdown",
+          "path": "./syntaxes/markdown.tmLanguage.json",
+          "embeddedLanguages": {
+              "meta.embedded.block.ose": "ose",
+              "meta.embedded.block.viml": "viml"
+          },
+          "unbalancedBracketScopes": [
+              "markup.underline.link.markdown",
+              "punctuation.definition.list.begin.markdown"
+          ]
+        }
     ]
   },
   "dependencies": {
